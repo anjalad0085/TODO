@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/container/confirm_delete.css">
+    </head>
+<body>
+    <div class="confirm-container">
+   <form method="POST" action="">
+    <p>Are you sure you want to delete "{{entry.topic}}"?</p>
+    {% csrf_token %}
+    <div class="action-button">
+    <button type="submit">Confirm</button>
+    <a href="{% url 'home' %}" class="cancel-link">Cancel</a>
+</div>
+</form>
+</div>
+</body>
+</html>
+
+
+
+{%endblock%}

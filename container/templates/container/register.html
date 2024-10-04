@@ -1,0 +1,21 @@
+{% extends "main.html" %} {% block content %}
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/static/container/register.css"
+  />
+</head>
+<div class="form-container">
+  <form method="POST" action="">
+    {% csrf_token %} {{form.as_p}}
+    <div class="submit-container">
+      <input type="submit" value="Register" class="register-submit" />
+    </div>
+    <div class="already-signed">
+      <p>Already signed up yet?</p>
+      <a href="{% url 'login' %}">Login</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

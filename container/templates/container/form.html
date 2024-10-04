@@ -1,0 +1,17 @@
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/container/form.css">
+  </head>
+<div>
+    <h3>CREATE A NEW ENTRY</h3>
+    <div class="form-container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="submit-container">
+            <input type="submit" value="Submit" class="entry-submit">
+        </div>
+    </form>
+    </div>
+</div>
+{% endblock %}

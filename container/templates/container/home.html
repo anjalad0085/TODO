@@ -1,0 +1,58 @@
+
+{% extends 'main.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/container/home.css">
+</head>
+<body>
+  <p>Welcome, {{ user.username }}  !</p>
+  <a href="{% url 'logout' %}">Logout</a>
+  <div class="table-container">
+    <div class="table-header">
+      <a href="{% url 'create-list' %}" class="add-task">Add Task</a>
+    </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>S No</th>
+        <th>Topic</th>
+        <th>Status</th>
+        <th>Time</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in entries %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td><a href="{% url 'display-list' entry.pk %}">{{ entry.topic }}</a></td>
+        <td><p>{{ entry.progress }}</p></td>
+        <td>{{ entry.created|date:"F j, Y, g:i a" }}</td>
+        <td>
+          <div class="action-button">
+          {% if entry.progress != 'Completed' %}
+          <form method="POST" action="{% url 'mark-completed' entry.pk %}">
+            {% csrf_token %}
+            <button type="submit">Completed</button>
+          </form>
+          {% endif %}
+
+          <a href="{% url 'delete-list' entry.pk %}" class="delete-button">Delete</a>
+        </div>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5" class="no-entries">No entries available</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+{% endblock %}

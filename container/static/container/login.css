@@ -1,0 +1,66 @@
+/* General styles for the form container */
+.login-container {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    align-items: center; /* Centers items horizontally */
+    width: 100%; /* Ensures the container spans full width */
+    max-width: 500px; /* Optional: Limits the maximum width of the form */
+    margin: 0 auto; /* Centers the form horizontally */
+    margin-top: 120px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column; /* Aligns form elements vertically */
+    width: 100%;
+}
+
+/* Label styling */
+label {
+    display: flex;
+    justify-content: flex-start; /* Aligns labels to the start of the container */
+    margin-bottom: 5px; /* Adds space below the label */
+}
+
+/* Input styling */
+input[type="text"],
+input[type="password"] {
+    width: 96%; /* Ensures inputs span the full width */
+    padding: 10px; /* Adds padding inside the input */
+    margin-bottom: 15px; /* Adds space below the input */
+    border: 1px solid #ccc; /* Adds a border to inputs */
+    border-radius: 5px; /* Rounds the corners of inputs */
+}
+
+/* Submit button styling */
+.submit-button {
+    font-family: 'Arvo', serif;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Ensures the button does not stretch */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%; /* Ensures the button does not stretch across the container */
+}
+
+/* Optional: Align the sign-up and login links */
+p {
+    margin-top: 10px; /* Adds space above the paragraph */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover for links */
+}
+

@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{%block content%}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/container/display.css">
+  </head>
+  <div class="display-container">
+    <div>
+<h2>{{entry.topic}}</h2>
+<p>{{entry.description}}</p>
+<div class="action-button">
+<a href="{% url 'update-list' entry.pk%}">Update</a>
+<a href="{% url 'delete-list' entry.pk%}">Delete</a></div>
+</div>
+  </div>
+{%endblock%}

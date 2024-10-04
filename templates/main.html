@@ -1,0 +1,41 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      {% comment %} :root {
+        --primary-color: #990011;
+        --sec-color:#FCF6F5;
+    }
+    html, body {
+        height: 100%;
+    
+        font-family: 'Arvo', serif;
+        background: var(--sec-color);
+        /* background: rgb(34,193,195);
+        background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+       
+    }
+      #header{
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+    } {% endcomment %}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="header">TODO</h1>
+    </header>
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --primary-color: #990011;
+    --sec-color:#FCF6F5;
+    --ter-color:#61000b;
+    --four-color:#d1bebb;
+    --nth-color: #f8d5d9;
+}
+
+table {
+    width: 100%; /* Adjust this value as needed */
+    border-collapse: collapse;
+    
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color:var(--four-color);
+    color: var(--ter-color);
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color:var(--nth-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font-family: 'Arvo', serif;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+
+button:hover {
+    background-color: var(--ter-color);
+}
+
+.delete-button{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: lighter;
+}
+.delete-button:hover {
+    background-color: var(--ter-color);
+    text-decoration: none;
+}
+
+.action-button{
+    display: flex;
+    justify-content: center;
+}
+
+.no-entries {
+    text-align: center; /* Centers the text horizontally */
+    font-weight: bold; /* Makes the text bold */
+    color: #7d7878; /* Gives the text a gray color */
+    padding: 15px; /* Adds some padding to the cell */
+    background-color: #f4f4f400; /* Light gray background */
+    font-size: 16px; /* Adjusts the font size */
+}
+
+.table-container {
+    margin: 15px auto;
+    width: 90%;
+
+}
+
+.table-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px; /* Space between the button and the table */
+}
+
+.add-task {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+.add-task:hover {
+    background-color:  var(--ter-color);
+    text-decoration: none;
+}
